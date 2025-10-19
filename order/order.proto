@@ -1,4 +1,5 @@
 syntax = "proto3";
+
 option go_package="github/serdyanuk/order-pproto/golang/order";
 
 message CreateOrderRequest {
