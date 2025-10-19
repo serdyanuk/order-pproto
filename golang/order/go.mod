@@ -1,4 +1,4 @@
-module github.com/serdyanuk/order-pproto/golang/ordder
+module github.com/serdyanuk/order-pproto/golang/order
 
 go 1.24.1
 
