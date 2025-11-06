@@ -14,11 +14,11 @@ message OrderItem {
 }
 
 message CreateOrderResponse {
-    int64 order_id = 1;
+    string order_id = 1;
 }
 
 message GetOrderRequest {
-    int64 order_id = 1;
+    string order_id = 1;
 }
 
 message GetOrderResponse {
