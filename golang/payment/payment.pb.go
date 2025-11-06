@@ -83,7 +83,7 @@ func (x *CreatePaymentRequest) GetTotalPrice() float32 {
 
 type CreatePaymentResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	PaymentId     int64                  `protobuf:"varint,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
+	PaymentId     string                 `protobuf:"bytes,1,opt,name=payment_id,json=paymentId,proto3" json:"payment_id,omitempty"`
 	BillId        int64                  `protobuf:"varint,2,opt,name=bill_id,json=billId,proto3" json:"bill_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
@@ -119,11 +119,11 @@ func (*CreatePaymentResponse) Descriptor() ([]byte, []int) {
 	return file_payment_payment_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *CreatePaymentResponse) GetPaymentId() int64 {
+func (x *CreatePaymentResponse) GetPaymentId() string {
 	if x != nil {
 		return x.PaymentId
 	}
-	return 0
+	return ""
 }
 
 func (x *CreatePaymentResponse) GetBillId() int64 {
@@ -145,7 +145,7 @@ const file_payment_payment_proto_rawDesc = "" +
 	"totalPrice\"O\n" +
 	"\x15CreatePaymentResponse\x12\x1d\n" +
 	"\n" +
-	"payment_id\x18\x01 \x01(\x03R\tpaymentId\x12\x17\n" +
+	"payment_id\x18\x01 \x01(\tR\tpaymentId\x12\x17\n" +
 	"\abill_id\x18\x02 \x01(\x03R\x06billId2D\n" +
 	"\aPayment\x129\n" +
 	"\x06Create\x12\x15.CreatePaymentRequest\x1a\x16.CreatePaymentResponse\"\x00B.Z,github/serdyanuk/order-pproto/golang/paymentb\x06proto3"
